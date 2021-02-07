@@ -29,4 +29,5 @@ button {
   font-size: 30px;
   border-radius: 10px;
   border: none;
+  transition: 0.3s cubic-bezier(0.56, 0.2, 0.46, 1.27) all;
 }

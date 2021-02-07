@@ -19,12 +19,22 @@ function App() {
   const moveRight = () => {
     setOffSetLeft(offSetLeft + 50)
   }
+  const scaleUp = (event) => {
+    event.target.style.transform = 'scale(1.1,1.1)'
+  }
+  const scaleDown = (event) => {
+    event.target.style.transform = 'scale(1,1)'
+  }
+
+
   return (
     <div className="App">
       <h1>Move the Box!</h1>
 
       {/* handle the click event on this button */}
-      <button onClick={() => moveUp()}>👆 Move Up 👆</button>
+      <button onClick={() => moveUp()} onMouseOver={(e) => scaleUp(e)} onMouseOut={(e) => scaleDown(e)}>
+        👆 Move Up 👆
+        </button>
       <button onClick={() => moveDown()}>👆 Move Down 👆</button>
       <br></br>
       <button onClick={() => moveLeft()}>👆 Move Left 👆</button>
